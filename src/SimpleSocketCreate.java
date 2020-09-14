@@ -8,7 +8,7 @@ public class SimpleSocketCreate {
 		// TODO Auto-generated method stub
 		
 		String host = "localhost";
-		int port = 8080;
+		int port = 4000;
 		
 		try {
 			System.out.println("Attempting to connect a TCP service on "
