@@ -13,7 +13,7 @@ public class Decrypt {
 	public static void main(String[] args) throws Exception {
 		
 		// Read the shared secret key
-		SecretKey KEY = CryptKey.readSecretKey();
+		SecretKey key = CryptKey.readSecretKey();
 		byte[] ciphertext = null;
 		
 		// Recieve ciphertext from the network
@@ -47,7 +47,7 @@ public class Decrypt {
 		// Decrypt the recieved ciphertext using the secret key
 		System.out.println("Decrypting the message....");
 		Cipher cipher = Cipher.getInstance(CryptKey.ALGORITHM);
-		cipher.init(Cipher.DECRYPT_MODE, KEY);
+		cipher.init(Cipher.DECRYPT_MODE, key);
 		System.out.println(new String(cipher.update(ciphertext)));
 		System.out.println(new String(cipher.doFinal()));
 		
